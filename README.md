@@ -1,9 +1,9 @@
-## 1. The Defination of const Type
-* const type is a type when users enter the keyword of "const". Variables and objects cannot be changed if they are defined with const.
-* 常类型是指使用类型修饰符const说明的类型，常类型的变量或对象的值是不能被更新的。
+## 1. The Definition of const Type
+const type is a type when users enter the keyword of "const". Variables and objects cannot be changed if they are defined with const.
+常类型是指使用类型修饰符const说明的类型，常类型的变量或对象的值是不能被更新的。
 
 ## 2.The functions of const: const作用
-* define a constant value 可以定义常量
+define a constant value 可以定义常量
 ```c++
   const int a = 100; // check the type
 ```
