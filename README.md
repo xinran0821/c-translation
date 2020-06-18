@@ -1,23 +1,25 @@
 ## 1. The Definition of const Type
 const type is a type when users enter the keyword of "const". Variables and objects cannot be changed if they are defined with const.
-常类型是指使用类型修饰符const说明的类型，常类型的变量或对象的值是不能被更新的。
 
-## 2.The functions of const: const作用
-define a constant value 可以定义常量
+## 2.The functions of const:
+* define a constant value
 ```c++
-  const int a = 100; // check the type
+        const int a = 100;
 ```
-类型检查
-
-const常量与#define宏定义常量的区别：
-~~const常量具有类型，编译器可以进行安全检查；#define宏定义没有数据类型，只是简单的字符串替换，不能进行安全检查。~~感谢两位大佬指出这里问题，见：issue
-const定义的变量只有类型为整数或枚举，且以常量表达式初始化时才能作为常量表达式。
+* check the type
+        * the difference between const value and the constant value under #define:
+        ~~const常量具有类型，编译器可以进行安全检查；#define宏定义没有数据类型，只是简单的字符串替换，不能进行安全检查。~~感谢             两位大佬指出这里问题，见：issue
+        * 
+        const定义的变量只有类型为整数或枚举，且以常量表达式初始化时才能作为常量表达式。
 其他情况下它只是一个 const 限定的变量，不要将与常量混淆。
 防止修改，起保护作用，增加程序健壮性
 
-void f(const int i){
-    i++; //error!
-}
+```c++
+        void f(const int i){
+                i++; //error!
+        }
+```
+
 可以节省空间，避免不必要的内存分配
 
 const定义常量从汇编的角度来看，只是给出了对应的内存地址，而不是像#define一样给出的是立即数。
